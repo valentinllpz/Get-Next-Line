@@ -1,14 +1,6 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    README.md                                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: vlugand- <vlugand-@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/12/22 18:06:16 by vlugand-          #+#    #+#              #
-#    Updated: 2019/12/22 18:06:16 by vlugand-         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+GET NEXT LINE | 42 Paris | 2019
+
+Main functions explained in details:
 
 int		find_index(const char *s, int c)
 
@@ -52,7 +44,8 @@ int		get_next_line(int fd, char **line)
 
 --------------------------------------------------------------------------------
 
-Please don't copy/paste my code, you should try to understand it and make your own. 
+Please don't copy/paste my code, you should try to understand it and make your own.
+
 Stuck? Start over, that's the best advice I was given for GNL. :)
 
 Good luck!
