@@ -44,7 +44,8 @@ int		get_next_line(int fd, char **line)
 
 --------------------------------------------------------------------------------
 
-Please don't copy/paste my code, you should try to understand it and make your own. 
+Please don't copy/paste my code, you should try to understand it and make your own.
+
 Stuck? Start over, that's the best advice I was given for GNL. :)
 
 Good luck!
