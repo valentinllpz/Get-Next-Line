@@ -6,11 +6,11 @@
 /*   By: vlugand- <vlugand-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/20 19:10:43 by vlugand-          #+#    #+#             */
-/*   Updated: 2019/12/22 17:22:03 by vlugand-         ###   ########.fr       */
+/*   Updated: 2019/12/21 23:05:15 by vlugand-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 size_t		ft_strlen(const char *s)
 {

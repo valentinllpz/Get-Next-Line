@@ -6,11 +6,11 @@
 /*   By: vlugand- <vlugand-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 15:47:19 by vlugand-          #+#    #+#             */
-/*   Updated: 2019/12/21 23:03:29 by vlugand-         ###   ########.fr       */
+/*   Updated: 2019/12/22 17:44:46 by vlugand-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line_bonus.h"												
 
 int		find_index(const char *s, int c)
 {
@@ -40,10 +40,10 @@ int		get_line(char **str, char **line, int i)
 	return (1);
 }
 
-int		get_next_line(int fd, char **line)
+int		get_next_line(int fd, char **line)							// The only difference here is 'str[fd]', otherwise it's exactly the same as the code of GNL without bonus.
 {
 	char			buff[BUFFER_SIZE + 1];
-	static char		*str[OPEN_MAX];
+	static char		*str[OPEN_MAX];									// OPEN_MAX is used in <limits.h>, it corresponds to the max fd value. Read more about it on internet.
 	int				ret;
 	int				i;
 

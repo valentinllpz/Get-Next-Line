@@ -6,7 +6,7 @@
 /*   By: vlugand- <vlugand-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/20 19:10:43 by vlugand-          #+#    #+#             */
-/*   Updated: 2019/12/21 23:05:24 by vlugand-         ###   ########.fr       */
+/*   Updated: 2019/12/22 17:38:32 by vlugand-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char		*ft_substr(char const *s, int start, int len)
 	return (str);
 }
 
-char		*join_and_free(char *s1, char *s2)
+char		*join_and_free(char *s1, char *s2) 										// custom strjoin that frees s1 (our static 'str'). If 'str' does not exist it does a strdup of s2 (our 'buff').
 {
 	int		len1;
 	int		len2;
