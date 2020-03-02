@@ -1,3 +1,3 @@
 GET NEXT LINE | 42 Paris | 2019
 
-![SCREENSHOT](GNL\ \(explained\ line\ by\ line\))
+![SCREENSHOT](https://raw.githubusercontent.com/valentinllpz/Get_Next_line/GNL (explained line by line)/screenshot.png)
