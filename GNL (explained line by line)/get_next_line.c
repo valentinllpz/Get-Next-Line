@@ -1,14 +1,14 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vlugand- <vlugand-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/18 15:47:19 by vlugand-          #+#    #+#             */
-/*   Updated: 2019/12/22 17:38:21 by vlugand-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+/* *********************************************************************************************************************************************************************************************************************************** */
+/*                                                																																			    			                           */
+/*                     																																							                                   :::      ::::::::   */
+/*   get_next_line.c               													COMMENTS SECTION BELOW																					                     :+:      :+:    :+:   */
+/*  																																														                   +:+ +:+         +:+     */
+/*   By: vlugand- <vlugand-@student.42.fr>      									/!\ In order to display properly the comment section open this file with your favourite text editor /!\      		     +#+  +:+       +#+        */
+/*                                             										Any question or suggestion? Feel free to contact me.																   +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/18 15:47:19 by vlugand-        																																					   	    #+#    #+#             */
+/*   Updated: 2020/03/02 22:12:12 by vlugand-   																																							   ###   ########.fr       */
+/*                                                     																																					       			               */
+/* *********************************************************************************************************************************************************************************************************************************** */
 
 #include "get_next_line.h"
 
@@ -24,7 +24,7 @@ int		find_index(const char *s, int c)										// Not much to explain here, a ve
 	return (i);
 }
 
-int		get_line(char **str, char **line, int i)								// get_line takes 'str', which is a char** so we can directly work with the original pointer/string, not with a copy.
+int		get_line(char *str, char **line, int i)								
 {
 	int		len;
 
@@ -32,11 +32,6 @@ int		get_line(char **str, char **line, int i)								// get_line takes 'str', wh
 	++i;																		// We move our index 1 position after '\n'.
 	len = ft_strlen(*str + i) + 1;												// We want to know what's the lenght of the string after the first '\n'. The +1 is here to include the '\0' in 'len'.
 	ft_memmove(*str, *str + i, len);											// We move what's after the first '\n' to the beginning of 'str', '\0' included to make things easy.
-	if (*str && *str[0] == '\0')												// If 'str' exists and it's empty.
-	{
-		free(*str);																// Let's free it, it's empty and useless now.	
-		*str = NULL;															// ALWAYS set to NULL after a malloc.
-	}
 	return (1);																	// We ALWAYS return (1) because we call get_line only if a '\n' was found.
 }
 
@@ -69,3 +64,6 @@ int		get_next_line(int fd, char **line)
 	return (ret);																// Return (0).
 }
 																				// Enjoy! Don't copy/paste my code, you should try to understand it and make your own. Stuck? Start over, that's the best advice I was given for GNL. :)
+
+
+
