@@ -9,18 +9,13 @@ If we don't find a '\n' we will return (-1). Simply to avoid confusion if s[0] =
 
 --------------------------------------------------------------------------------
 
-int		get_line(char **str, char **line, int i)
-
-Nb: get_line takes 'str', which is a char** so we can directly work with the original pointer/string, not with a copy.
+int		get_line(char *str, char **line, int i)
 
 1. We assign to 'line' what is in 'str', from str[0] to str[i]. Remember, 'i' is the index where our '\n' was located.
 2. We move our index 1 position after '\n'.
 3. We want to know what's the lenght of the string after the first '\n'. The +1 is here to include the '\0' in 'len'.
 4. We move what's after the first '\n' to the beginning of 'str', '\0' included to make things easy.
-5. If 'str' exists and it's empty.
-6. Let's free it, it's empty and useless now.	
-7. ALWAYS set to NULL after a malloc.
-8. We ALWAYS return (1) because we call get_line only if a '\n' was found.
+5. We ALWAYS return (1) because we call get_line only if a '\n' was found.
 
 --------------------------------------------------------------------------------
 
