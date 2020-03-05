@@ -28,10 +28,10 @@ int		get_line(char *str, char **line, int i)
 {
 	int		len;
 
-	*line = ft_substr(*str, 0, i);												// We assign to 'line' what is in 'str', from str[0] to str[i]. Remember, 'i' is the index where our '\n' was located.
+	*line = ft_substr(str, 0, i);												// We assign to 'line' what is in 'str', from str[0] to str[i]. Remember, 'i' is the index where our '\n' was located.
 	++i;																		// We move our index 1 position after '\n'.
-	len = ft_strlen(*str + i) + 1;												// We want to know what's the lenght of the string after the first '\n'. The +1 is here to include the '\0' in 'len'.
-	ft_memmove(*str, *str + i, len);											// We move what's after the first '\n' to the beginning of 'str', '\0' included to make things easy.
+	len = ft_strlen(str + i) + 1;												// We want to know what's the lenght of the string after the first '\n'. The +1 is here to include the '\0' in 'len'.
+	ft_memmove(str, str + i, len);												// We move what's after the first '\n' to the beginning of 'str', '\0' included to make things easy.
 	return (1);																	// We ALWAYS return (1) because we call get_line only if a '\n' was found.
 }
 
