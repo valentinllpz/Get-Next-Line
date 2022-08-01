@@ -1,15 +1,22 @@
-GET NEXT LINE | 42 Paris | 2019
+# Get Next Line (2019)
 
-Main functions explained in details:
+This [42](https://42.fr/en/homepage/) project aims to make us write a function that allows us to open and read a file line by line using file descriptors and store its content in a `char **` (string array).
 
-int		find_index(const char *s, int c)
+## 🧭 Usage
+
+Clone the repository and access it with `cd`. From there, use the following command :
+```
+make bonus
+```
+
+## 📚 Functions explained in details
+
+`int		find_index(const char *s, int c)`
 
 Not much to explain here, a very basic function that finds the index of our '\n'.
 If we don't find a '\n' we will return (-1). Simply to avoid confusion if s[0] = '\n'.
 
---------------------------------------------------------------------------------
-
-int		get_line(char *str, char **line, int i)
+`int		get_line(char *str, char **line, int i)`
 
 1. We assign to 'line' what is in 'str', from str[0] to str[i]. Remember, 'i' is the index where our '\n' was located.
 2. We move our index 1 position after '\n'.
@@ -17,9 +24,7 @@ int		get_line(char *str, char **line, int i)
 4. We move what's after the first '\n' to the beginning of 'str', '\0' included to make things easy.
 5. We ALWAYS return (1) because we call get_line only if a '\n' was found.
 
---------------------------------------------------------------------------------
-
-int		get_next_line(int fd, char **line)
+`int		get_next_line(int fd, char **line)`
 
 1. First, we look for basic errors our variables. We use a read 0 here to look for errors without moving our cursor.
 2. If our static string 'str' exists and we found a '\n' in it at the index 'i', let's call get_line. 
