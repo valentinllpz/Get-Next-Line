@@ -11,7 +11,7 @@ make bonus
 
 ## 📚 Code explained in details
 
-![code explained](screenshot)
+![code explained](screenshot.png)
 
 
 ### Note for 42 students
